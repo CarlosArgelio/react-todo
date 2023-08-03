@@ -1,4 +1,8 @@
-import logo from './platzi.webp';
+import { TodoCounter } from './TodoCounter'
+import { TodoSearch } from './TodoSearch'
+import { TodoList } from './TodoList'
+import { TodoItem } from './TodoItem';
+import { TodoButtom } from './TodoButtom'
 import './App.css';
 
 function App() {
@@ -16,18 +20,8 @@ function App() {
 
       </TodoList>
 
-      <TodoBotom />
+      <TodoButtom />
     </div>
-  );
-}
-
-function TodoItem() {
-  return (
-    <li>
-      <span>V</span>
-      <p>Vacaciones en cancun</p>
-      <span>X</span>
-    </li>
   );
 }
 
