@@ -22,7 +22,8 @@ function App() {
         {defaultTodos.map(todo => (
           <TodoItem 
             key={todo.text} 
-            text={todo.text} 
+            text={todo.text}
+            completed={todo.completed}
           />
         ))}
         {/* {[<TodoCounter />, <TodoList />]} */}
