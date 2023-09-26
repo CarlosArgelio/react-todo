@@ -1,15 +1,8 @@
-import './TodoCounter.css'
-
-// const styles = {
-//   fontSize: '24px',
-//   textAlign: 'center',
-//   margin: 0,
-//   padding: '48px',
-// }
+import styles from './TodoCounter.style'; 
 
 function TodoCounter({ total, completed }) {
     return (
-      <h1 >
+      <h1 style={styles.todoCounter}>
         Has completado {completed} de {total}
       </h1>
     );
