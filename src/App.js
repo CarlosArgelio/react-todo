@@ -1,8 +1,8 @@
-import { TodoCounter } from './TodoCounter'
-import { TodoSearch } from './TodoSearch'
-import { TodoList } from './TodoList'
-import { TodoItem } from './TodoItem';
-import { TodoButtom } from './TodoButtom'
+import { TodoCounter } from './components/TodoCounter/TodoCounter'
+import { TodoSearch } from './components/TodoSearch/TodoSearch'
+import { TodoList } from './components/TodoLIst/TodoList'
+import { TodoItem } from './components/TodoItem/TodoItem';
+import { TodoButtom } from './components/TodoButom/TodoButtom'
 
 
 const defaultTodos = [
