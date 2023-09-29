@@ -8,8 +8,9 @@ import { TodoButtom } from './components/TodoButton/TodoButton'
 
 const defaultTodos = [
   { text: 'Cortar cebolla', completed: true },
-  { text: 'Tomar agua', completed: false },
-  { text: 'Hacer ejercicio', completed: true }
+  { text: 'la', completed: false },
+  { text: 'Hacer ejercicio', completed: true },
+  { text: 'LA', completed: true },
 ]
 
 function App() {
@@ -18,6 +19,14 @@ function App() {
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+
+  const searchedTodos = todos.filter(
+    (todo) => {
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLowerCase();
+      return todoText.includes(searchText)
+    }
+  );
 
 
   return (
@@ -33,7 +42,7 @@ function App() {
 
       <TodoList>
 
-        {todos.map(todo => (
+        {searchedTodos.map(todo => (
           <TodoItem 
             key={todo.text} 
             text={todo.text}
