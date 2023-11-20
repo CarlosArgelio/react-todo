@@ -47,6 +47,7 @@ function App() {
             key={todo.text} 
             text={todo.text}
             completed={todo.completed}
+            onCompleted={completedTodos}
           />
         ))}
         {/* {[<TodoCounter />, <TodoList />]} */}
