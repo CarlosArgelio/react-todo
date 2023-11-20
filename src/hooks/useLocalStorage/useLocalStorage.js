@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function useLocalStorage(itemName, initialValue) {
   const [item, setItem] = useState(initialValue);
@@ -24,6 +24,7 @@ function useLocalStorage(itemName, initialValue) {
         setError(true);
       }
     }, 2000);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const saveItem = (newItem) => {
