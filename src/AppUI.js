@@ -7,14 +7,12 @@ import { TodosLoading } from "./components/TodosLoading";
 import { TodosErrors } from "./components/TodosErrors";
 import { TodosEmpty } from "./components/TodosEmpty";
 import { TodoContext } from "./context/TodosContext";
-import { useContext } from "react";
-import { Modal } from "./components/Modal/Modal";
+import React, { useContext } from "react";
+import { Modal } from "./components/Modal";
 
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo, openModel, setOpenModal } = useContext(TodoContext);
-  // setOpenModal(true);
-  console.log(openModel);
+  const { loading, error, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal } = useContext(TodoContext);
 
   return (
     <>
@@ -40,7 +38,7 @@ function AppUI() {
 
       <TodoButtom />
       
-      {openModel ? null : (
+      {openModal && (
         <Modal>
           Agregar modal
         </Modal>
