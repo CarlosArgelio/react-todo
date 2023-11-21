@@ -24,6 +24,7 @@ function AppUI() {
     setOpenModal,
     completedTodos,
     totalTodos,
+    addTodo, 
   } = useContext(TodoContext);
 
   return (
@@ -56,7 +57,10 @@ function AppUI() {
 
       {openModal && (
         <Modal>
-          <TodoForm />
+          <TodoForm 
+            addTodo={addTodo}
+            setOpenModal={setOpenModal}
+          />
         </Modal>
       )}
     </>
