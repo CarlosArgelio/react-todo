@@ -1,34 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './index.css';
-// import { ToDo as App } from './pages'
+import './index.css';
+import { ToDo as App } from './pages'
 
-function App(props) {
-    return (
-      <h1>¡{props.saludo}, {props.nombre}!</h1>
-    );
-  }
+// function App(props) {
+//     return (
+//       <h1>¡{props.saludo}, {props.nombre}!</h1>
+//     );
+//   }
   
-  function withSaludo(saludo) {
-    return function WrappedComponentWithSaludo(WrappedComponent) {
-      return function ComponenteDeVerdad(props) {
-        return (
-          <React.Fragment>
-            <WrappedComponent {...props} saludo={saludo} />
-            <p>Estamos acompañando al WrappedComponent</p>
-          </React.Fragment>
-        );
-      }
-    }
-  }
+//   function withSaludo(saludo) {
+//     return function WrappedComponentWithSaludo(WrappedComponent) {
+//       return function ComponenteDeVerdad(props) {
+//         return (
+//           <React.Fragment>
+//             <WrappedComponent {...props} saludo={saludo} />
+//             <p>Estamos acompañando al WrappedComponent</p>
+//           </React.Fragment>
+//         );
+//       }
+//     }
+//   }
   
-  const AppWithSaludo = withSaludo('Wenas')(App);
-  
-//   ReactDOM.render(
-//     <AppWithSaludo nombre="Juanita" />,
-//     // <App saludo="Buenas" nombre="Nath" />,
-//     document.getElementById('root')
-//   );
+//   const AppWithSaludo = withSaludo('Wenas')(App);
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<AppWithSaludo nombre="Juanita" />);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppWithSaludo nombre="Juanita" />);
+root.render(<App />);
