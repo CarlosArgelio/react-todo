@@ -8,9 +8,13 @@ import { TodosErrors } from "./components/TodosErrors";
 import { TodosEmpty } from "./components/TodosEmpty";
 import { TodoContext } from "./context/TodosContext";
 import { useContext } from "react";
+import { Modal } from "./components/Modal/Modal";
+
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo } = useContext(TodoContext);
+  const { loading, error, searchedTodos, completeTodo, deleteTodo, openModel, setOpenModal } = useContext(TodoContext);
+  // setOpenModal(true);
+  console.log(openModel);
 
   return (
     <>
@@ -35,6 +39,12 @@ function AppUI() {
           </TodoList>
 
       <TodoButtom />
+      
+      {openModel ? null : (
+        <Modal>
+          Agregar modal
+        </Modal>
+      )}
     </>
   );
 }
