@@ -9,6 +9,7 @@ import { TodosEmpty } from "./components/TodosEmpty";
 import { TodoContext } from "./context/TodosContext";
 import React, { useContext } from "react";
 import { Modal } from "./components/Modal";
+import { TodoForm } from "./components/TodoForm";
 
 
 function AppUI() {
@@ -36,11 +37,13 @@ function AppUI() {
             ))}
           </TodoList>
 
-      <TodoButtom />
+      <TodoButtom 
+        setOpenModal={setOpenModal}
+      />
       
       {openModal && (
         <Modal>
-          Agregar modal
+          <TodoForm />
         </Modal>
       )}
     </>
