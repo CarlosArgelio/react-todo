@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { cloneElement, Children } from 'react';
 
-function TodoHeader({ children }) {
+function TodoHeader({ children, loading }) {
   return (
     <header>
-      {children}
+      {Children.toArray(children).map(child => cloneElement(child, { loading }))}
     </header>
   );
 }
